@@ -1,0 +1,50 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: Calibri;
+}
+
+header section.blogMe {
+	background: #62A6DA;
+	height: 75px;
+	width: 100%;
+	display: block;
+
+}
+
+section.body {
+	width: 50%;
+}
+
+header nav {
+	float: left;
+	background: #142C5D;
+	width: 100%;
+	padding: 8px;
+	color: #FFF;
+	border-top: 3px solid #F5F5E6;
+}
+
+header nav ul {
+	overflow: hidden;list-style: none; margin-left: 60px;
+}
+
+header nav ul li {
+	float: left;
+	padding: 0px 5px;
+}
+
+.post_to {
+	color: #142C5D;
+	font-size: 45px;
+	font-family: Arial black;
+	margin: auto 60px;
+}
+
+.contenido {
+	width: 100%; max-width: 100%;
+	height: 300px; max-height: 300px;	
+}

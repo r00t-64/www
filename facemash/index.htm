@@ -1,1 +1,75 @@
+<?php 
+	require_once 'funciones.php';
+	$obj =  new Funciones();
+	$mostrar1 = $obj->loadRandomPhoto();
+	$mostrar2 = $obj->loadRandomPhoto();
+	$
 
+ ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ardiente o no?</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head> 	
+<body>
+<header>
+	<center>FACEMASH</center>
+</header>
+	<center>
+		<h3><div><b><br>¿Nos dejaron entrar por nuestra apariencia? No, ¿Seremos juzgados por ello? sí.</h3>
+		<br><h2>¿Quién es más ardiente? Haga clic para elegir</b></h2></div>
+		<div id="photo-frame">
+			<?php
+
+				foreach ($mostrar1 as $girla) {
+						echo '<img id="girla" src="photos/'.$girla["PHOTO"].'.jpg">';
+						echo $girla["ID"];
+					}	
+
+			 	?>
+		
+		OR
+		
+			<?php
+
+				foreach ($mostrar2 as $girlb) {
+						echo $girlb["ID"];
+						if ($girla["ID"] == $girlb["ID"]) {
+							$girlb["ID"] == $girlb["ID"] + 1 ;
+							echo $girlb["ID"];
+							echo "fotos iguales";
+						}
+							echo '<img id="girlb" src="photos/'.$girlb["PHOTO"].'.jpg">';
+						
+						
+					}	
+
+			 	?>
+		</div>
+	</center>
+	
+	<?php 
+		$Ea = 1/(1+pow(10,($girlb["RATE"]-$girla["RATE"])/400 ));
+		$Eb = 1/(1+pow(10,($girla["RATE"]-$girlb["RATE"])/400 ));
+		
+
+
+
+
+
+
+	 ?>
+
+	<div id="wrapper">
+		
+		<div class="bottom-link">
+		<a href="">Acerca de</a>
+		 <a href="">Enviar</a>
+		 <a href="ranking.php">Rankings</a>  
+		</div>
+		
+	</div>
+
+</body>
